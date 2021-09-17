@@ -13,13 +13,20 @@
             <h1>Movie Finder</h1>
             <h3>It's like IMDb, but worse!</h3>
         </header>
-        <div id='form-container'>
+        <div id='movie-form'>
             <form>
                 <input type='text' name='title' placeholder='Enter Movie Title'>
                 <input type='submit' value='submit'>
             </form>
         </div>
-        <div id='list-container'></div>
+        <div id='list-container'>
+            <div id='list-form'>
+                <form>
+                    <input type='text' name='new-list' placeholder='New List'>
+                    <input type='submit' value='submit'>
+                </form>
+            </div>
+        </div>
         <div id='movie-container'></div>
     </body>
     <script src='src/index.js'></script>
