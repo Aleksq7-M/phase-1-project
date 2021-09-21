@@ -17,6 +17,26 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     document.querySelector('#list-form form').addEventListener('submit', e => {
         e.preventDefault()
+        let configObj = {
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body:JSON.stringify({
+                listName: e.target[0].value,
+                movies: []
+            })
+        }
+        fetch('http://localhost:3000/lists', configObj)
+        .then(resp => resp.json())
+        .then(json => {
+            let newList = document.createElement('li')
+            let listList = document.querySelector('.listList');
+            newList.innerText = json.listName;
+            newList.addEventListener('click', e => expandList(e))
+            listList.appendChild(newList)
+        })
     })
 
 
@@ -71,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function makeList(obj){
         let listList = document.createElement('ul');
+        listList.className = 'listList';
         obj.forEach(list => {
             let name = document.createElement('li');
             name.innerText = list.listName;
@@ -91,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         let title = document.createElement('li');
                         title.innerText = movie.Title;
                         title.addEventListener('click', e => {
+                            cardContainer.innerHTML = ''
                             cardContainer.appendChild(createMovieCard(movie))
                         })
                         movieList.appendChild(title);

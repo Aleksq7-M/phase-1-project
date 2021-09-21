@@ -1,49 +1,71 @@
 {
-    "lists": [
+  "lists": [
+    {
+      "id": 1,
+      "listName": "Example List",
+      "movies": [
         {
-            "id": 1,
-            "listName": "Example List",
-            "movies":[
-                {
-                    "Actors": "Emilio Estevez, Judd Nelson, Molly Ringwald",
-                    "Director": "John Hughes",
-                    "Genre": "Comedy, Drama",
-                    "Plot": "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
-                    "Poster": "https://m.media-amazon.com/images/M/MV5BOTM5N2ZmZTMtNjlmOS00YzlkLTk3YjEtNTU1ZmQ5OTdhODZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-                    "Ratings": [
-                        {"Source": "Internet Movie Database",
-                        "Value": "7.8/10"},
-                        {"Source": "Rotten Tomatoes",
-                        "Value": "89%"},
-                        {"Source": "Metacritic",
-                        "Value": "66/100"}
-                    ],
-                    "Released": "15 Feb 1985",
-                    "Title": "The Breakfast Club"
-                },
-                {
-                    "Actors": "John Cusack, Thanidiwe Newton, Chiwetel Ejiofor",
-                    "Director": "Roland Emmerich",
-                    "Genre": "Action, Adventure, Sci-Fi",
-                    "Plot": "A frustrated writer struggles to keep his family alive when a series of global catastrophes threatens to annihilate mankind.",
-                    "Poster": "https://m.media-amazon.com/images/M/MV5BMTY0MjEyODQzMF5BMl5BanBnXkFtZTcwMTczMjQ4Mg@@._V1_SX300.jpg",
-                    "Ratings": [
-                        {"Source": "Internet Movie Database",
-                        "Value": "5.8/10"},
-                        {"Source": "Rotten Tomatoes",
-                        "Value": "39%"},
-                        {"Source": "Metacritic",
-                        "Value": "44/100"}
-                    ],
-                    "Released": "13 Nov 2009",
-                    "Title": "2012"
-                }
-            ]
+          "Actors": "Emilio Estevez, Judd Nelson, Molly Ringwald",
+          "Director": "John Hughes",
+          "Genre": "Comedy, Drama",
+          "Plot": "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BOTM5N2ZmZTMtNjlmOS00YzlkLTk3YjEtNTU1ZmQ5OTdhODZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+          "Ratings": [
+            {
+              "Source": "Internet Movie Database",
+              "Value": "7.8/10"
+            },
+            {
+              "Source": "Rotten Tomatoes",
+              "Value": "89%"
+            },
+            {
+              "Source": "Metacritic",
+              "Value": "66/100"
+            }
+          ],
+          "Released": "15 Feb 1985",
+          "Title": "The Breakfast Club"
         },
         {
-            "id": "2",
-            "listName": "Example List #2",
-            "movies":[]
+          "Actors": "John Cusack, Thanidiwe Newton, Chiwetel Ejiofor",
+          "Director": "Roland Emmerich",
+          "Genre": "Action, Adventure, Sci-Fi",
+          "Plot": "A frustrated writer struggles to keep his family alive when a series of global catastrophes threatens to annihilate mankind.",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMTY0MjEyODQzMF5BMl5BanBnXkFtZTcwMTczMjQ4Mg@@._V1_SX300.jpg",
+          "Ratings": [
+            {
+              "Source": "Internet Movie Database",
+              "Value": "5.8/10"
+            },
+            {
+              "Source": "Rotten Tomatoes",
+              "Value": "39%"
+            },
+            {
+              "Source": "Metacritic",
+              "Value": "44/100"
+            }
+          ],
+          "Released": "13 Nov 2009",
+          "Title": "2012"
         }
-    ]
+      ]
+    },
+    {
+      "id": 2,
+      "listName": "Example List #2",
+      "movies": []
+    },
+    {
+      "listName": "Spider-Films",
+      "movies": [],
+      "id": 3
+    },
+    {
+      "listName": "Marvel Movies",
+      "movies": [],
+      "id": 4
+    }
+  ]
 }
