@@ -91,28 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         let title = document.createElement('li');
                         title.innerText = movie.Title;
                         title.addEventListener('click', e => {
-                            fetch('http://localhost:3000/lists')
-                            .then(resp => resp.json())
-                            .then(json => {
-                                json.forEach(list => {
-                                    for (let key in list){
-                                        if (key === 'movies'){
-                                            let movies = list[key];
-                                            for (let film in movies){
-                                                let films = movies[film]
-                                                for (info in films){
-                                                    if (info === 'Title'){
-                                                        if (films[info] === e.target.innerText){
-                                                            cardContainer.innerHTML = '';
-                                                            cardContainer.appendChild(createMovieCard(films))
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                })
-                            })
+                            cardContainer.appendChild(createMovieCard(movie))
                         })
                         movieList.appendChild(title);
                     })
