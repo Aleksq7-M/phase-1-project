@@ -27,18 +27,42 @@ header{
     text-align:center;
 }
 
+#movie-container{
+    background-color:white;
+    display:table-row;
+}
+
 #list-container{
     padding:5px;
     background-color:rgb(128, 128, 128);
-    position:absolute;
-    left:0;
-    height: 100vh;
-
+    display:table-cell;
+    width:234.06px;
 }
 
-#movie-container{
+#list-form{
+    margin-top:4px;
+    position:relative;
+    top:initial;
+}
+
+#card-container{
     background-color:white;
-    height: 100vh;
+    display:table-cell;
+    text-align:center;
+}
+
+#card-container h2{
+    margin-top:4px;
+}
+
+#card-container span{
+    margin:0 10px; 
+}
+
+.wrapper{
+    display:table;
+    height:100vh;
+    width:100vw;
 }
 
 .hidden{

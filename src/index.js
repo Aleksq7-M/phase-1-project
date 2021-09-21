@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let cardContainer = document.querySelector('#movie-container')
+    let cardContainer = document.querySelector('#card-container')
+    let listContainer = document.querySelector('#list-container')
+    fetch('http://localhost:3000/lists')
+    .then(resp => resp.json())
+    .then(json => {listContainer.appendChild(makeList(json))})
     document.querySelector('#movie-form form').addEventListener('submit', e => {
         e.preventDefault()
         cardContainer.innerHTML = '';
         fetch(`http://www.omdbapi.com/?t=${e.target[0].value}&apikey=8cd1a818`)
         .then(resp => resp.json())
         .then(json => {
-            container.appendChild(createMovieCard(json))
+            cardContainer.appendChild(createMovieCard(json))
             console.log(json)
             e.target.reset()
         })
+    })
+    document.querySelector('#list-form form').addEventListener('submit', e => {
+        e.preventDefault()
     })
 })
 
@@ -46,20 +53,47 @@ let genre = document.createElement('span');
 genre.innerText = `Genre: ${obj.Genre}`;
 card.appendChild(genre);
 
-let br = document.createElement('br');
-card.appendChild(br);
 
-let ratingsContainer = document.createElement('div')
-let imdb = document.createElement('span')
-imdb.innerText = `IMDB Rating: ${obj.imdbRating}`
-ratingsContainer.appendChild(imdb);
-let metascore = document.createElement('span');
-metascore.innerText = `Metascore: ${obj.Metascore}`;
-ratingsContainer.appendChild(metascore);
-let rottenTomatoes = document.createElement('span')
-rottenTomatoes.innerText = `Rotten Tomatoes: ${obj.Ratings[1].value}`;
-ratingsContainer.appendChild(rottenTomatoes);
-card.appendChild(ratingsContainer);
+let imdb = document.createElement('p')
+imdb.innerText = `IMDB Rating: ${obj.Ratings[0].Value}`
+card.appendChild(imdb);
+
+let metascore = document.createElement('p');
+metascore.innerText = `Metascore: ${obj.Ratings[2].Value}`;
+card.appendChild(metascore);
+
+let rottenTomatoes = document.createElement('p')
+rottenTomatoes.innerText = `Rotten Tomatoes: ${obj.Ratings[1].Value}`;
+card.appendChild(rottenTomatoes);
 
 return card;
+}
+
+function makeList(obj){
+    let listList = document.createElement('ul');
+    obj.forEach(list => {
+        let name = document.createElement('li');
+        name.innerText = list.listName;
+        name.addEventListener('click', e => {expandList(e)})
+        listList.appendChild(name);
+    })
+    return listList;
+}
+
+function expandList(event){
+    fetch('http://localhost:3000/lists')
+    .then(resp => resp.json())
+    .then(json => {
+        json.forEach(list => {
+            if (list.listName === event.target.innerText){
+                let movieList = document.createElement('ul');
+                list.movies.forEach(movie => {
+                    let title = document.createElement('li');
+                    title.innerText = movie.Title;
+                    movieList.appendChild(title);
+                })
+                event.target.appendChild(movieList)
+            }
+        })
+    })
 }
