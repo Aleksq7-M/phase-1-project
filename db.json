@@ -136,6 +136,150 @@
       "Title": "Spider-Man: Into the Spider-Verse",
       "listId": "3",
       "id": 5
+    },
+    {
+      "Actors": "Tobey Maguire, Kirsten Dunst, Alfred Molina",
+      "Director": "Sam Raimi",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Plot": "Peter Parker is beset with troubles in his failing personal life as he battles a brilliant scientist named Doctor Otto Octavius.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "93%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "83/100"
+        }
+      ],
+      "Title": "Spider-Man 2",
+      "listId": "3",
+      "id": 6
+    },
+    {
+      "Actors": "Tobey Maguire, Kirsten Dunst, Alfred Molina",
+      "Director": "Sam Raimi",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Plot": "Peter Parker is beset with troubles in his failing personal life as he battles a brilliant scientist named Doctor Otto Octavius.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "93%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "83/100"
+        }
+      ],
+      "Title": "Spider-Man 2",
+      "listId": "3",
+      "id": 7
+    },
+    {
+      "Actors": "Tobey Maguire, Kirsten Dunst, Topher Grace",
+      "Director": "Sam Raimi",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Plot": "A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "63%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "59/100"
+        }
+      ],
+      "Title": "Spider-Man 3",
+      "listId": "3",
+      "id": 8
+    },
+    {
+      "Actors": "Tobey Maguire, Kirsten Dunst, Topher Grace",
+      "Director": "Sam Raimi",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Plot": "A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "63%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "59/100"
+        }
+      ],
+      "Title": "Spider-Man 3",
+      "listId": "1",
+      "id": 9
+    },
+    {
+      "Actors": "Michael Keaton, Jack Nicholson, Kim Basinger",
+      "Director": "Tim Burton",
+      "Genre": "Action, Adventure",
+      "Plot": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.5/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "71%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "69/100"
+        }
+      ],
+      "Title": "Batman",
+      "listId": "1",
+      "id": 10
+    },
+    {
+      "Actors": "Sean Penn, Jennifer Jason Leigh, Judge Reinhold",
+      "Director": "Amy Heckerling",
+      "Genre": "Comedy, Drama",
+      "Plot": "A group of Southern California high school students are enjoying their most important subjects: sex, drugs, and rock n' roll.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYzBlZjE1MDctYjZmZC00ZTJmLWFkOWEtYjdmZDZkODBkZmI2XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "77%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "61/100"
+        }
+      ],
+      "Title": "Fast Times at Ridgemont High",
+      "listId": "1",
+      "id": 11
     }
   ]
 }

@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let listSelect = document.createElement('select');
     listSelect.name = "list-selector";
     listSelect.id = "list-selector";
-    document.querySelectorAll('.listList .list-name').forEach(node => {
+    document.querySelectorAll('.list-name, .list-name_clicked').forEach(node => {
         let option = document.createElement('option');
         option.innerText = node.innerText.split('\n')[0];
         option.value = node.id;
@@ -129,7 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         fetch(`http://localhost:3000/lists/${e.target[0].value}/movies`, configObj)
         .then(resp => resp.json())
-        .then(json => console.log(json))
+        .then(json => {
+            let listList = document.querySelector('.listList');
+            listList.childNodes.forEach(node => {
+                if (node.id === e.target[0].value && node.className.split('_')[1]==='clicked'){
+                    let li = document.createElement('li');
+                    li.innerText = json.Title;
+                    node.childNodes[1].appendChild(li);
+                }
+            })
+        })
     })
     card.appendChild(addToList);
 
@@ -144,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
             name.innerText = list.listName;
             name.className = 'list-name'
             name.id = list.id;
-            name.addEventListener('click', e => {expandList(e)})
+            name.addEventListener('click', e => {
+                name.className += '_clicked'
+                expandList(e)})
             listList.appendChild(name);
         })
         return listList;
