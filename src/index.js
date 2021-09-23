@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Accept": "application/json"
             },
             body:JSON.stringify({
-                movies:{
                     Actors: obj.Actors,
                     Director: obj.Director,
                     Genre: obj.Genre,
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     Ratings: obj.Ratings,
                     Release: obj.Release,
                     Title: obj.Title
-                }
             })
         }
         fetch(`http://localhost:3000/lists/${e.target[0].value}/movies`, configObj)
@@ -153,24 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function expandList(event){
-        fetch('http://localhost:3000/lists')
+        fetch(`http://localhost:3000/lists/${event.target.id}/movies`)
         .then(resp => resp.json())
         .then(json => {
-            json.forEach(list => {
-                if (list.listName === event.target.innerText){
-                    let movieList = document.createElement('ul');
-                    list.movies.forEach(movie => {
-                        let title = document.createElement('li');
-                        title.innerText = movie.Title;
-                        title.addEventListener('click', e => {
-                            cardContainer.innerHTML = ''
-                            cardContainer.appendChild(createMovieCard(movie))
-                        })
-                        movieList.appendChild(title);
-                    })
-                    event.target.appendChild(movieList)
-                }
+            let movieList = document.createElement('ul')
+            json.forEach(movie =>{
+                let li = document.createElement('li');
+                li.innerText = movie.Title;
+                li.addEventListener('click', () => createMovieCard(movie))
+                movieList.appendChild(li);
             })
+            event.target.append(movieList);
         })
     }
 })
