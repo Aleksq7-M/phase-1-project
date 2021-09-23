@@ -158,10 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
             json.forEach(movie =>{
                 let li = document.createElement('li');
                 li.innerText = movie.Title;
-                li.addEventListener('click', () => createMovieCard(movie))
+                li.addEventListener('click', (e) => {
+                    console.log(e)
+                    e.stopPropagation()
+                    cardContainer.innerHTML = ''
+                    cardContainer.appendChild(createMovieCard(movie))
+                })
                 movieList.appendChild(li);
             })
-            event.target.append(movieList);
+            event.target.appendChild(movieList);
         })
     }
 })

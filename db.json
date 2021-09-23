@@ -112,6 +112,30 @@
       "Title": "Batman",
       "listId": "2",
       "id": 4
+    },
+    {
+      "Actors": "Shameik Moore, Jake Johnson, Hailee Steinfeld",
+      "Director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+      "Genre": "Animation, Action, Adventure",
+      "Plot": "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "97%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "87/100"
+        }
+      ],
+      "Title": "Spider-Man: Into the Spider-Verse",
+      "listId": "3",
+      "id": 5
     }
   ]
 }
