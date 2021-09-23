@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     let cardContainer = document.querySelector('#card-container')
     let listContainer = document.querySelector('#list-container')
+    //all localhost calls will be to /lists
+    //render lists stored in db.json on DOMContentLoaded
     fetch('http://localhost:3000/lists')
     .then(resp => resp.json())
     .then(json => {listContainer.appendChild(makeList(json))})
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.reset()
         })
     })
+    //New List Event Listener
     document.querySelector('#list-form form').addEventListener('submit', e => {
         e.preventDefault()
         let configObj = {
@@ -86,6 +89,52 @@ document.addEventListener('DOMContentLoaded', () => {
     rottenTomatoes.innerText = `Rotten Tomatoes: ${obj.Ratings[1].Value}`;
     card.appendChild(rottenTomatoes);
 
+    let addToList = document.createElement('form');
+    let label = document.createElement('label');
+    label.for = 'list-selector';
+    label.innerText = 'Add to List:'
+    let listSelect = document.createElement('select');
+    listSelect.name = "list-selector";
+    listSelect.id = "list-selector";
+    document.querySelectorAll('.listList .list-name').forEach(node => {
+        let option = document.createElement('option');
+        option.innerText = node.innerText.split('\n')[0];
+        option.value = node.id;
+        listSelect.appendChild(option);
+    })
+    addToList.appendChild(label);
+    addToList.appendChild(listSelect);
+    let submit = document.createElement('input');
+    submit.type = 'submit';
+    submit.innerText = 'Add'
+    addToList.appendChild(submit);
+    addToList.addEventListener('submit', e => {
+        e.preventDefault();
+        let configObj = {
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body:JSON.stringify({
+                movies:{
+                    Actors: obj.Actors,
+                    Director: obj.Director,
+                    Genre: obj.Genre,
+                    Plot: obj.Plot,
+                    Poster: obj.Poster,
+                    Ratings: obj.Ratings,
+                    Release: obj.Release,
+                    Title: obj.Title
+                }
+            })
+        }
+        fetch(`http://localhost:3000/lists/${e.target[0].value}/movies`, configObj)
+        .then(resp => resp.json())
+        .then(json => console.log(json))
+    })
+    card.appendChild(addToList);
+
     return card;
     }
 
@@ -95,6 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
         obj.forEach(list => {
             let name = document.createElement('li');
             name.innerText = list.listName;
+            name.className = 'list-name'
+            name.id = list.id;
             name.addEventListener('click', e => {expandList(e)})
             listList.appendChild(name);
         })

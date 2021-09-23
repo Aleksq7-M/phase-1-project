@@ -5,6 +5,7 @@
       "listName": "Example List",
       "movies": [
         {
+          "id": 1,
           "Actors": "Emilio Estevez, Judd Nelson, Molly Ringwald",
           "Director": "John Hughes",
           "Genre": "Comedy, Drama",
@@ -28,6 +29,7 @@
           "Title": "The Breakfast Club"
         },
         {
+          "id": 2,
           "Actors": "John Cusack, Thanidiwe Newton, Chiwetel Ejiofor",
           "Director": "Roland Emmerich",
           "Genre": "Action, Adventure, Sci-Fi",
@@ -55,17 +57,31 @@
     {
       "id": 2,
       "listName": "Example List #2",
-      "movies": []
-    },
-    {
-      "listName": "Spider-Films",
-      "movies": [],
-      "id": 3
-    },
-    {
-      "listName": "Marvel Movies",
-      "movies": [],
-      "id": 4
+      "movies": [
+        {
+          "id": 3,
+          "Actors": "Tobey Maguire, Kirsten Dunst, Willem Dafoe",
+          "Director": "Sam Raimi",
+          "Genre": "Action, Adventure, Sci-Fi",
+          "Plot": "When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg",
+          "Ratings": [
+            {
+              "Source": "Internet Movie Database",
+              "Value": "7.3/10"
+            },
+            {
+              "Source": "Rotten Tomatoes",
+              "Value": "90%"
+            },
+            {
+              "Source": "Metacritic",
+              "Value": "73/100"
+            }
+          ],
+          "Title": "Spider-Man"
+        }
+      ]
     }
   ]
 }
