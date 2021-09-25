@@ -3,23 +3,26 @@
     <head>
         <title>Frontend Project</title>
         <link rel='stylesheet' href='src/index.css'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@700&family=PT+Sans&display=swap');
+        </style>
     </head>
     <body>
         <div class='hidden' id='error-warn'>
-            <h3>Movie Not Found</h3>
+            <h3>ERROR</h3>
             <p>error message</p>
         </div>
         <header>
-            <h1>Movie Finder</h1>
+            <h1>MOVIE FINDER</h1>
             <h3>It's like IMDb, but worse!</h3>
         </header>
         <div id='movie-form'>
             <form>
+                <label for='title'>Movie Search</label><br/>
                 <input type='text' name='title' placeholder='Enter Movie Title'>
                 <input type='submit' value='submit'>
             </form>
         </div>
-        <br/>
         <div class='wrapper'>
             <div id='movie-container'>
                 <div id='list-container'>
@@ -30,9 +33,7 @@
                         </form>
                     </div>
                 </div>
-                <div id='card-container'>
-
-                </div>
+                <div id='card-container'></div>
             </div>
         </div>
     </body>
