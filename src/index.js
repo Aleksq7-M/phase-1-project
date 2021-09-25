@@ -167,8 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             name.className = 'list-name'
             name.id = list.id;
             name.addEventListener('click', e => {
-                if (e.target.className === 'list-item_clicked'){
-                    e.target.className.replace('_clicked', '')
+                if (e.target.className.includes('_clicked')){
+                    e.target.className = 'list-name'
+                    e.target.childNodes[1].remove()
                 }else{
                 name.className += '_clicked'
                 expandList(e)}})
