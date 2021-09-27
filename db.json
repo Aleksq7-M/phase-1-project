@@ -11,6 +11,10 @@
     {
       "listName": "Spider-Films",
       "id": 3
+    },
+    {
+      "listName": "Marvel Movies",
+      "id": 4
     }
   ],
   "movies": [
@@ -231,6 +235,54 @@
       "Title": "Fast Times at Ridgemont High",
       "listId": "1",
       "id": 11
+    },
+    {
+      "Actors": "Hayden Christensen, Natalie Portman, Ewan McGregor",
+      "Director": "George Lucas",
+      "Genre": "Action, Adventure, Fantasy",
+      "Plot": "Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.5/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "80%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "68/100"
+        }
+      ],
+      "Title": "Star Wars: Episode III - Revenge of the Sith",
+      "listId": "2",
+      "id": 12
+    },
+    {
+      "Actors": "Robert Downey Jr., Gwyneth Paltrow, Terrence Howard",
+      "Director": "Jon Favreau",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "79/100"
+        }
+      ],
+      "Title": "Iron Man",
+      "listId": "4",
+      "id": 13
     }
   ]
 }

@@ -46,10 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('http://localhost:3000/lists', configObj)
         .then(resp => resp.json())
         .then(json => {
+            e.target.reset()
             //Add list to UI before page reload
             let newList = document.createElement('li')
             let listList = document.querySelector('.listList');
             newList.innerText = json.listName;
+            newList.className = 'list-name'
+            newList.id = json.id;
             newList.addEventListener('click', e => expandList(e))
             listList.appendChild(newList)
         })
